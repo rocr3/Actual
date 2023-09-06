@@ -385,3 +385,18 @@ async def get_shortlink(link):
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
             return await response.text()
+
+
+# ==============USE THIS FUNCTION TO AVOID SOME WORDS FROM TEXT============= #    
+
+def remove_words(text):
+    text = str(text).lower()
+    pattern = r'\b(?:{})\b'.format('|'.join(map(re.escape, AVOID_THESE)))
+    return re.sub(pattern, '', text)
+
+   # ==============USE THIS FUNCTION TO AVOID SOME WORDS FROM TEXT============= #    
+
+def remove_words2(text):
+    text = str(text).lower()
+    pattern = r'\b(?:{})\b'.format('|'.join(map(re.escape, AVOID_THESE2)))
+    return re.sub(pattern, '', text)
