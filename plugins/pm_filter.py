@@ -657,11 +657,59 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('Welcome', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
                     InlineKeyboardButton('✅ Yes' if settings["welcome"] else '❌ No',
                                          callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')
-                ]
+                ], 
+            [
+                    InlineKeyboardButton(
+                        'sʜᴏʀᴛʟɪɴᴋ',
+                        callback_data=f'setgs#shortlink#{grp_id}',
+                    ),
+                    InlineKeyboardButton(
+                        f'✅ {settings["shortlink"]}' if settings["shortlink"] else SHORTLINK_URL,
+                        callback_data=f'setgs#shortlink#{grp_id}',
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        'sʜᴏʀᴛʟɪɴᴋ ᴀᴘɪ',
+                        callback_data=f'setgs#shortlink_api#{grp_id}',
+                    ),
+                    InlineKeyboardButton(
+                        f'✅ {settings["shortlink_api"][:10]}...' if settings["shortlink_api"] else SHORTLINK_API[:10] + '...',
+                        callback_data=f'setgs#shortlink_api#{grp_id}',
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        'ғᴏʀᴄᴇ sᴜʙ',
+                        callback_data=f'setgs#forcesub#{grp_id}',
+                    ),
+                    InlineKeyboardButton(
+                        f'✅ {settings["forcesub"]}...' if 'forcesub' in settings else 'Not Set',
+                        callback_data=f'setgs#forcesub#{grp_id}',
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        'ᴛᴜᴛᴏʀɪᴀʟ ʟɪɴᴋ',
+                        callback_data=f'setgs#tutorial#{grp_id}',
+                    ),
+                    InlineKeyboardButton(
+                        f'✅ {settings["tutorial"]}...' if 'tutorial' in settings else 'Not Set',
+                        callback_data=f'setgs#tutorial#{grp_id}',
+                    ),
+                ],
+                [
+                    InlineKeyboardButton(
+                        'SʜᴏʀᴛLɪɴᴋ',
+                        callback_data=f'setgs#enable_shortlink#{settings["enable_shortlink"]}#{grp_id}'),
+                    InlineKeyboardButton('✅ ʏᴇs' if settings["enable_shortlink"] else '❌ 𝐍𝐎',
+                                         callback_data=f'setgs#enable_shortlink#{settings["enable_shortlink"]}#{grp_id}')
+                ]                         
             ]
+            
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Sᴜᴘᴘᴏʀᴛ TᴀᴍɪʟᴀɴBᴏᴛsZ')
+    await query.answer('ᴘʟᴇᴀsᴇ sʜᴀʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -711,6 +759,11 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
 
+
+    btn.insert(0, [
+        InlineKeyboardButton("! Sᴇʟᴇᴄᴛ Lᴀɴɢᴜᴀɢᴇ !", callback_data=f"select_lang#{message.from_user.id}#{key}")
+    ])
+    
     btn.insert(0, 
         [
             InlineKeyboardButton('🔴 𝗛𝗢𝗪 𝗧𝗢 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 🔴', url='https://t.me/Notificationsactr/9')
