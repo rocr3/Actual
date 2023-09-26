@@ -379,8 +379,8 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
 async def get_shortlink(link):
-    url = f'https://api.shareus.io/easy_api'
-    api_key = "BxAXtVJ8LlgEYZFcBltF6CLxRVJ3"
+    url = f'https://gplinks.in/api'
+    api_key = "2debca3a80f260b5cb5bb2d8d61c03425d9731a6"
     params = {'key': api_key, 'link': link}
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params, raise_for_status=True) as response:
