@@ -75,5 +75,5 @@ if AUTO_DELETE == "True":
     AUTO_DELETE = True
 
 #Sample
-SHORTNER_SITE = "shareus.io"
-SHORTNER_API = "BxAXtVJ8LlgEYZFcBltF6CLxRVJ3"
+SHORTNER_SITE = "gplinks.in"
+SHORTNER_API = "2debca3a80f260b5cb5bb2d8d61c03425d9731a6"
