@@ -75,5 +75,5 @@ if AUTO_DELETE == "True":
     AUTO_DELETE = True
 
 #Sample
-SHORTNER_SITE = "kingurl.in"
-SHORTNER_API = "21bad4e94a15dcbfc685f8bf5a6d37a7da13df15"
+SHORTNER_SITE = "instantlinks.in"
+SHORTNER_API = "6e7cecc691aa5ecbf827623bf6cf5519687c0534"
