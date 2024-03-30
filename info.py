@@ -75,5 +75,5 @@ if AUTO_DELETE == "True":
     AUTO_DELETE = True
 
 #Sample
-SHORTNER_SITE = "instantlinks.in"
+SHORTNER_SITE = "urlspay.in"
 SHORTNER_API = "dc257d5f413a9f1a1fbcc07abf3a71fc66dee619"
