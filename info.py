@@ -76,4 +76,4 @@ if AUTO_DELETE == "True":
 
 #Sample
 SHORTNER_SITE = "urlspay.in"
-SHORTNER_API = "dc257d5f413a9f1a1fbcc07abf3a71fc66dee619"
+SHORTNER_API = "21bad4e94a15dcbfc685f8bf5a6d37a7da13df15"
